@@ -4,7 +4,7 @@ print("Enter the number whose prime factorization has to found")
 n = int(input())
 y=1
 cont=1
-print(type(cont))
+
 
 while(cont ==1):
     num =n + math.pow(y,2)
@@ -25,6 +25,6 @@ if(sq):
     
     print(y)
     print(sq)
-    print(int(sq), int(sq)+y)
+    print(int(sq-y), int(sq)+y)
 else:
     print("Prime factorization not possible")
