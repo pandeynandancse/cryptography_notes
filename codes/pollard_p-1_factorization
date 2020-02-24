@@ -1,0 +1,36 @@
+import math
+print("Welcome to pollard p-1 factorization")
+print("Enter the number whose prime factorization has to found")
+n = int(input())
+k =2
+ans=1
+def fact(k):
+    mul=1
+    while(k>0):
+        k = k*mul
+        k = k-1
+    return k
+
+def gcd(num, n):
+    if(num>n):
+        minn = n
+        for i in range(minn):
+            if n%i == 0:
+                if num%i ==0:
+                    gcdd = i
+        return(gcdd)
+    elif(num==n):
+        return num
+    else:
+        minn = num
+        for i in range(minn):
+            if num%i == 0:
+                if n%i ==0:
+                    gcdd = i
+        return(gcdd)
+while(ans ==1):
+    num = math.pow(2,fact(k)-1)
+    ans = gcd( num, n)
+    if ans  not in [num, n,1]:
+        print(ans)
+    k = k + 1
