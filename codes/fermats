@@ -1,0 +1,30 @@
+import math
+print("Welcome to fermat factorization")
+print("Enter the number whose prime factorization has to found")
+n = int(input())
+y=1
+cont=1
+print(type(cont))
+
+while(cont ==1):
+    num =n + math.pow(y,2)
+   
+   
+    sq = math.sqrt(num)
+    if (sq - int(sq) != 0):
+        y = y + 1
+        cont = 1
+        
+      
+        
+    else:
+        cont=0
+        
+        
+if(sq):
+    
+    print(y)
+    print(sq)
+    print(int(sq), int(sq)+y)
+else:
+    print("Prime factorization not possible")
